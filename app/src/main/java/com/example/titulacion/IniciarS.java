@@ -41,28 +41,5 @@ public class IniciarS extends AppCompatActivity {
         btnIniciar=findViewById(R.id.btnIniciar);
 
 
-
-
-
-        btnIniciar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*if ("Jonathan"==txtNombre.toString()){
-                    if ("Prueba01"==txtContra.toString()){
-                        Intent entrar = new Intent(IniciarS.this, Becas.class);
-                        startActivity(entrar);
-                        finish();
-                    }
-                    else {
-                        Toast.makeText(IniciarS.this, "Contraseña Incorecta", Toast.LENGTH_SHORT).show();
-                    }
-                }
-                else {
-                    Toast.makeText(IniciarS.this, "Nombre Incorecto", Toast.LENGTH_SHORT).show();
-                }*/
-            }
-
-        });
-
 }
 }
