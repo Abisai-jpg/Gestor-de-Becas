@@ -29,6 +29,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:background="#C8C8C8"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,8 +38,16 @@
         <ImageButton
             android:id="@+id/btnR1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/regresar" />
+
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/usuario" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

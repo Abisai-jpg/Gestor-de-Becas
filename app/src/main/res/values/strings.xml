@@ -9,6 +9,10 @@
     <string name="iniciar_4">Iniciar Seción</string>
     <string name="iniciar_5">Regresar</string>
 
+    <string name="perfil1">DATOS</string>
+    <string name="perfil2">Edad</string>
+    <string name="perfil3">Genero</string>
+
     <string name="men">Prueba de Aplicacion de Proyecto de titulacion: Gestor de Becas y/o apoyos sociales</string>
     <string name="men2">Aqui es la interfaz principal del gestor.  Se mostrara el buscador y/o filtro de becas, las posibles becas en base al perfil del usuario (Edad, Genero)</string>
 </resources>
