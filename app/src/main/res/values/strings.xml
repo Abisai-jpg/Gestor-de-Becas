@@ -13,6 +13,13 @@
     <string name="perfil2">Edad</string>
     <string name="perfil3">Genero</string>
 
+    <string-array name="genero">
+        <item>...</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
     <string name="men">Prueba de Aplicacion de Proyecto de titulacion: Gestor de Becas y/o apoyos sociales</string>
     <string name="men2">Aqui es la interfaz principal del gestor.  Se mostrara el buscador y/o filtro de becas, las posibles becas en base al perfil del usuario (Edad, Genero)</string>
 </resources>

@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DEA3A3"
+    android:background="#323232"
     tools:context=".Perfil">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#E6E6E6"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,12 +30,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/foto01" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/foto01" />
+
+                <ImageButton
+                    android:id="@+id/btnIcono"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    app:srcCompat="@drawable/editf" />
+            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
@@ -73,11 +90,19 @@
                     android:textStyle="bold" />
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/btnEdit"
                     android:layout_width="100dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/editar" />
+
+                <ImageButton
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/guardar" />
 
             </LinearLayout>
 
@@ -102,14 +127,23 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/lblEdad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#BEBEBE"
                     android:gravity="center"
-                    android:text="TextView"
                     android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/txtEdad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:textColor="#000000"
+                    android:visibility="gone" />
 
             </LinearLayout>
 
@@ -134,14 +168,21 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/lblGene"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#BEBEBE"
                     android:gravity="center"
-                    android:text="TextView"
                     android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spGene"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/genero"
+                    android:visibility="gone" />
             </LinearLayout>
 
         </LinearLayout>
