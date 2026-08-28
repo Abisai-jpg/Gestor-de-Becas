@@ -40,12 +40,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
-                <ImageView
-                    android:id="@+id/imgPerfil"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/foto01" />
+                    app:cardCornerRadius="80dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/imgPerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/foto01" />
+
+                </androidx.cardview.widget.CardView>
 
                 <ImageButton
                     android:id="@+id/btnIcono"
