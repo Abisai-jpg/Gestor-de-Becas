@@ -6,6 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,12 +18,14 @@ import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -30,9 +35,9 @@ import java.nio.channels.ScatteringByteChannel;
 public class Becas extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton btn1, btnPerfil;
-
     private ImageView imgPerfilActual;
     private ActivityResultLauncher<String> seleccionarImagenLauncher;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,7 @@ public class Becas extends AppCompatActivity implements View.OnClickListener {
         });
         btn1 = findViewById(R.id.btnR1);
         btnPerfil = findViewById(R.id.btnPerfil);
+
 
         btn1.setOnClickListener(this);
         btnPerfil.setOnClickListener(this);
@@ -76,10 +82,44 @@ public class Becas extends AppCompatActivity implements View.OnClickListener {
                     }
                 }
         );
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.tool);
+
+        setSupportActionBar(toolbar);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("");
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_i, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.barraB){
+
+            buscar();
+        }
+        if(item.getItemId() == R.id.itemSalir){
+            Intent contacto = new Intent(Becas.this, MainActivity.class);
+            startActivity(contacto);
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void buscar() {
+
     }
 
     @Override
     public void onClick(View v) {
+
         if (v.getId() == R.id.btnR1) {
             Intent regresarM = new Intent(Becas.this, MainActivity.class);
             startActivity(regresarM);
@@ -142,6 +182,8 @@ public class Becas extends AppCompatActivity implements View.OnClickListener {
                     imgPerfil.setImageURI(Uri.parse(imgRegistrada));
                 }
 
+
+
                 btnEdit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -194,4 +236,6 @@ public class Becas extends AppCompatActivity implements View.OnClickListener {
             }
         }
     }
+
+
 }
